@@ -1,124 +1,99 @@
-<div align="center">
-
-# Hi, I'm Hamdan 👋
-
-### Data Science & Artificial Intelligence Student at UAEU
-
-**Learning with curiosity · Building with purpose · Sharing the journey**
-<br>
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect%20with%20me-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/hamdanesmail/)
-
-</div>
-
----
-
-## About Me
-
-I am a Data Science and Artificial Intelligence undergraduate at **United Arab Emirates University**.
-
-I am interested in using data, artificial intelligence and technology to understand real problems, discover meaningful insights and build practical solutions.
-
-I learn best by building. Through university coursework, independent study and personal projects, I am strengthening my skills in programming, data analysis, statistics and machine learning.
-
-* 🎓 Studying Data Science and Artificial Intelligence at UAEU
-* 📊 Interested in data analysis and visualization
-* 🤖 Exploring machine learning and responsible AI
-* 💻 Building practical software and web projects
-* 🌱 Continuously improving my Python and problem-solving skills
-* 🤝 Open to internships, research and student collaborations
-
----
-
-## Current Focus
-
-```text
-Python                  Data Analysis
-Statistics              Data Visualization
-Machine Learning        Artificial Intelligence
-Git & GitHub            Technical Communication
-```
-
-### Tools I Am Learning and Using
-
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat-square\&logo=pandas\&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat-square\&logo=numpy\&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Data%20Visualization-blue?style=flat-square)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat-square\&logo=jupyter\&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square\&logo=github\&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML5-E34F26?style=flat-square\&logo=html5\&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=flat-square\&logo=css3\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)
-
----
-
-## Featured Projects
-
-### 🖥️ [Windows 95 in a Browser](https://github.com/HamdanEsmail/Windows-95-in-a-Browser)
-
-A browser-based recreation of the Windows 95 experience, featuring an interactive desktop, file-management interface, classic styling and sound effects.
-
-**Technologies:** HTML, CSS, JavaScript and Web Audio API
-
----
-
-### 🧪 [Chemistry Learning Website](https://github.com/HamdanEsmail/ChemistryProject.github.io)
-
-An educational website created to make chemistry more engaging through learning resources, research content, quizzes and interactive simulations.
-
-**Technologies:** HTML, CSS and JavaScript
-
----
-
-### ✨ [VibeOS](https://github.com/HamdanEsmail/VibeOS)
-
-An experimental AI-powered web application developed while exploring AI Studio, Node.js and Gemini-powered application development.
-
-**Technologies:** Node.js, TypeScript and Gemini API
-
----
-
-## What I Am Working Toward
-
-My current goals are to:
-
-* Build a stronger portfolio of data-science projects
-* Apply Python to real datasets and practical problems
-* Improve my understanding of statistics and machine learning
-* Write cleaner, clearer and better-documented code
-* Gain experience through internships and research
-* Explore responsible AI applications relevant to the UAE
-* Share what I learn with other students
-
----
-
-## My Approach to Learning
-
-> Learn the concept.
-> Apply it in a project.
-> Document the process.
-> Reflect on the result.
-> Improve and build again.
-
-I believe progress comes from curiosity, consistency and a willingness to keep learning.
-
----
-
-## Let's Connect
-
-I enjoy meeting students, researchers and professionals interested in data science, artificial intelligence and technology.
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Hamdan%20Esmail-0A66C2?style=flat-square\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/hamdanesmail/)
-[![GitHub](https://img.shields.io/badge/GitHub-HamdanEsmail-181717?style=flat-square\&logo=github\&logoColor=white)](https://github.com/HamdanEsmail)
-
----
+<p align="center">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-header-static.svg">
+    <img src="./assets/profile-header.svg" alt="Hamdan — Data Science and Artificial Intelligence student at UAE University" width="100%">
+  </picture>
+</p>
 
 <div align="center">
-
-### Thanks for visiting my profile!
-
-**Always learning. Always building.**
-
+  <p><strong>Learning with curiosity · Building with purpose · Sharing the journey</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/UAEU-Data%20Science%20%26%20AI-E3B341?style=flat-square&labelColor=0B1F3A" alt="UAEU Data Science and AI">
+    <img src="https://img.shields.io/badge/UAE-Based-C4A574?style=flat-square&labelColor=070B14" alt="Based in the UAE">
+    <img src="https://img.shields.io/badge/Open%20to-Internships%20%26%20Research-E8D5B5?style=flat-square&labelColor=0B1F3A" alt="Open to internships and research">
+  </p>
 </div>
+
+<img src="./assets/section-accent.svg" alt="" width="100%">
+
+I am a Data Science and Artificial Intelligence undergraduate at **United Arab Emirates University**. I use data, code, and careful questions to understand real problems and turn them into working software.
+
+I learn best by building—coursework, independent study, and public projects. I am looking for internships, research, and collaborations with other students.
+
+<p align="center">
+  <img src="./assets/constellation-path.svg" alt="How I work: learn concepts, build projects that run, apply them to problems worth solving" width="100%">
+</p>
+
+<img src="./assets/section-accent.svg" alt="" width="100%">
+
+### Tools in rotation
+
+<p>
+  <img src="https://img.shields.io/badge/Python-E3B341?style=flat-square&logo=python&logoColor=070B14&labelColor=0B1F3A" alt="Python">
+  <img src="https://img.shields.io/badge/Statistics-C4A574?style=flat-square&labelColor=070B14" alt="Statistics">
+  <img src="https://img.shields.io/badge/Machine%20Learning-E8D5B5?style=flat-square&labelColor=0B1F3A" alt="Machine Learning">
+  <img src="https://img.shields.io/badge/TypeScript-E3B341?style=flat-square&logo=typescript&logoColor=070B14&labelColor=0B1F3A" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Git-C4A574?style=flat-square&logo=git&logoColor=070B14&labelColor=070B14" alt="Git">
+  <img src="https://img.shields.io/badge/HTML%20%2F%20CSS%20%2F%20JS-E8D5B5?style=flat-square&labelColor=0B1F3A" alt="HTML CSS JavaScript">
+</p>
+
+<img src="./assets/section-accent.svg" alt="" width="100%">
+
+## Featured work
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/HamdanEsmail/firstrole">FirstRole</a></h3>
+      <img src="https://img.shields.io/badge/FEATURED-E3B341?style=flat-square&labelColor=0B1F3A" alt="Featured">
+      <p>A student job finder that reads public careers pages and turns them into a shortlist with sources, match reasons, and freshness—not invented openings.</p>
+      <p><strong>TypeScript · Cloudflare Workers · TinyFish</strong></p>
+      <p><a href="https://firstrole.hamdanesmail12-7a9.workers.dev">Live demo</a></p>
+    </td>
+    <td width="50%" valign="top">
+      <h3><a href="https://github.com/HamdanEsmail/coursesignal">CourseSignal</a></h3>
+      <img src="https://img.shields.io/badge/FEATURED-C4A574?style=flat-square&labelColor=070B14" alt="Featured">
+      <p>An evidence-first student copilot in iMessage. It finds and reads live public sources, then replies with a short, receipt-backed answer.</p>
+      <p><strong>TypeScript · TinyFish · iMessage</strong></p>
+      <p><a href="https://coursesignal-bzb.pages.dev/">Live companion</a></p>
+    </td>
+  </tr>
+</table>
+
+<img src="./assets/section-accent.svg" alt="" width="100%">
+
+## Education
+
+**United Arab Emirates University (UAEU)**  
+B.Sc. in Data Science and Artificial Intelligence  
+Undergraduate · United Arab Emirates
+
+<img src="./assets/section-accent.svg" alt="" width="100%">
+
+## GitHub activity
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=HamdanEsmail&show_icons=true&hide_border=false&bg_color=00000000&title_color=E3B341&text_color=E8D5B5&icon_color=C4A574&border_color=E3B341&rank_icon=github">
+    <img height="165" src="https://github-readme-stats.vercel.app/api?username=HamdanEsmail&show_icons=true&hide_border=false&bg_color=00000000&title_color=0B1F3A&text_color=3D2E1A&icon_color=C4A574&border_color=C4A574&rank_icon=github" alt="Hamdan's GitHub statistics">
+  </picture>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=HamdanEsmail&layout=compact&hide_border=false&bg_color=00000000&title_color=E3B341&text_color=E8D5B5&border_color=C4A574">
+    <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=HamdanEsmail&layout=compact&hide_border=false&bg_color=00000000&title_color=0B1F3A&text_color=3D2E1A&border_color=C4A574" alt="Most-used languages across Hamdan's public repositories">
+  </picture>
+</p>
+
+<p align="center"><sub>Language statistics reflect public repository usage and do not indicate proficiency.</sub></p>
+
+<img src="./assets/section-accent.svg" alt="" width="100%">
+
+## Connect
+
+I like meeting students, researchers, and people building with data and AI.
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/hamdanesmail/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0B1F3A?style=for-the-badge&logo=linkedin&logoColor=E8D5B5&labelColor=0B1F3A" alt="Connect with Hamdan on LinkedIn"></a>
+  <a href="https://github.com/HamdanEsmail"><img src="https://img.shields.io/badge/GitHub-Follow-E3B341?style=for-the-badge&logo=github&logoColor=070B14&labelColor=E3B341" alt="Follow Hamdan on GitHub"></a>
+</p>
+
+<p align="center"><strong>Always learning. Always building.</strong></p>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 260" role="img" aria-labelledby="pathTitle pathDesc">
+  <title id="pathTitle">How I work: learn, build, apply</title>
+  <desc id="pathDesc">Three points on a desert-night constellation: learn the idea, build a project, apply it to a real problem.</desc>
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="100%" stop-color="#0B1F3A"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16304A"/>
+      <stop offset="100%" stop-color="#0C1726"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="260" fill="url(#night)"/>
+
+  <g fill="#E8D5B5" opacity="0.35">
+    <circle cx="90" cy="36" r="0.8"/>
+    <circle cx="210" cy="22" r="0.6"/>
+    <circle cx="1280" cy="30" r="0.7"/>
+    <circle cx="1348" cy="58" r="0.5"/>
+    <circle cx="48" cy="72" r="0.5"/>
+  </g>
+
+  <path d="M0,206 C220,188 480,222 760,196 C1040,172 1240,214 1400,198 L1400,260 L0,260 Z" fill="url(#sand)"/>
+  <path d="M0,206 C220,188 480,222 760,196 C1040,172 1240,214 1400,198" fill="none" stroke="#E3B341" stroke-width="1.2" opacity="0.75"/>
+
+  <g fill="none" stroke="#E3B341" stroke-width="1.1" opacity="0.7">
+    <path d="M250 92 L700 92 L1150 92"/>
+  </g>
+  <g fill="#E3B341">
+    <circle cx="475" cy="92" r="1.6"/>
+    <circle cx="925" cy="92" r="1.6"/>
+  </g>
+
+  <g transform="translate(250,92)">
+    <circle r="18" fill="#070B14" stroke="#E3B341" stroke-width="1.4"/>
+    <circle r="3.2" fill="#E3B341"/>
+    <g stroke="#C4A574" stroke-width="0.8" opacity="0.8">
+      <line x1="0" y1="-11" x2="0" y2="-7"/>
+      <line x1="0" y1="7" x2="0" y2="11"/>
+      <line x1="-11" y1="0" x2="-7" y2="0"/>
+      <line x1="7" y1="0" x2="11" y2="0"/>
+    </g>
+  </g>
+  <g transform="translate(700,92)">
+    <circle r="18" fill="#070B14" stroke="#E3B341" stroke-width="1.4"/>
+    <circle r="3.2" fill="#E3B341"/>
+    <g stroke="#C4A574" stroke-width="0.8" opacity="0.8">
+      <line x1="0" y1="-11" x2="0" y2="-7"/>
+      <line x1="0" y1="7" x2="0" y2="11"/>
+      <line x1="-11" y1="0" x2="-7" y2="0"/>
+      <line x1="7" y1="0" x2="11" y2="0"/>
+    </g>
+  </g>
+  <g transform="translate(1150,92)">
+    <circle r="18" fill="#070B14" stroke="#E3B341" stroke-width="1.4"/>
+    <circle r="3.2" fill="#E3B341"/>
+    <g stroke="#C4A574" stroke-width="0.8" opacity="0.8">
+      <line x1="0" y1="-11" x2="0" y2="-7"/>
+      <line x1="0" y1="7" x2="0" y2="11"/>
+      <line x1="-11" y1="0" x2="-7" y2="0"/>
+      <line x1="7" y1="0" x2="11" y2="0"/>
+    </g>
+  </g>
+
+  <g font-family="Georgia, 'Times New Roman', serif" text-anchor="middle" fill="#E8D5B5">
+    <text x="250" y="148" font-size="18" letter-spacing="3">Learn</text>
+    <text x="700" y="148" font-size="18" letter-spacing="3">Build</text>
+    <text x="1150" y="148" font-size="18" letter-spacing="3">Apply</text>
+  </g>
+  <g font-family="Segoe UI, system-ui, sans-serif" text-anchor="middle" fill="#C4A574" font-size="12">
+    <text x="250" y="170">concepts, data, and math</text>
+    <text x="700" y="170">projects that actually run</text>
+    <text x="1150" y="170">problems worth solving</text>
+  </g>
+</svg>
