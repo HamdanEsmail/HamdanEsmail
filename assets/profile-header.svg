@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 360" role="img" aria-labelledby="title desc">
-  <title id="title">Hamdan  Data Science and Artificial Intelligence Student at UAE University</title>
+  <title id="title">Hamdan - Data Science and Artificial Intelligence Student at UAE University</title>
   <desc id="desc">A night desert banner: sparse constellation, dune ridge, and a gold horizon line.</desc>
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
@@ -86,5 +86,5 @@
   </g>
 
   <text x="700" y="168" text-anchor="middle" fill="#E8D5B5" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-weight="400" letter-spacing="6">Hamdan</text>
-  <text x="700" y="202" text-anchor="middle" fill="#C4A574" font-family="Segoe UI, system-ui, sans-serif" font-size="15" letter-spacing="3.2">DATA SCIENCE &amp; ARTIFICIAL INTELLIGENCE · UAEU</text>
+  <text x="700" y="202" text-anchor="middle" fill="#C4A574" font-family="Segoe UI, system-ui, sans-serif" font-size="15" letter-spacing="3.2">DATA SCIENCE &amp; ARTIFICIAL INTELLIGENCE ï¿½ UAEU</text>
 </svg>

@@ -1,8 +1,5 @@
 <p align="center">
-  <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="./assets/profile-header-static.svg">
-    <img src="./assets/profile-header.svg" alt="Hamdan — Data Science and Artificial Intelligence student at UAE University" width="100%">
-  </picture>
+  <img src="./assets/profile-header.png" alt="Hamdan — Data Science and Artificial Intelligence student at UAE University" width="100%">
 </p>
 
 <div align="center">
