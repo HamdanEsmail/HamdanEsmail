@@ -80,7 +80,6 @@ Undergraduate · United Arab Emirates
   </picture>
 </p>
 
-<p align="center"><sub>Language statistics reflect public repository usage and do not indicate proficiency.</sub></p>
 
 <img src="./assets/section-accent.svg" alt="" width="100%">
 
