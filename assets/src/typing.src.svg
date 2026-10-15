@@ -1,81 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="76" viewBox="0 0 1400 76">
   <style>
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes spinback { to { transform: rotate(-360deg); } }
-    @keyframes sweep { 0% { transform: translateX(-300px); } 100% { transform: translateX(1700px); } }
-    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
-    @keyframes travel { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(var(--d)); opacity: 0; } }
-    .spin { transform-box: fill-box; transform-origin: center; animation: spin 160s linear infinite; }
-    .spinback { transform-box: fill-box; transform-origin: center; animation: spinback 220s linear infinite; }
-    .sweep { animation: sweep 9s ease-in-out infinite; }
-    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes breathe { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+    @keyframes drift { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 0.8; } 100% { transform: translateY(-140px); opacity: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.4); } }
+    @keyframes eye { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+    .breathe { animation: breathe 7s ease-in-out infinite; }
+    .dust { animation: drift 9s linear infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-in-out infinite; }
+    .eye { animation: eye 4s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .spin, .spinback, .sweep, .pulse, .travel { animation: none !important; }
-      .sweep, .travel { opacity: 0; }
+      .breathe, .dust, .pulse, .eye { animation: none !important; }
+      .dust { opacity: 0; }
     }
   </style>
   <style>
     @keyframes vis0 { 0% { opacity: 1; } 32.83% { opacity: 1; } 33.33% { opacity: 0; } 100% { opacity: 0; } }
-    @keyframes type0 { 0% { transform: translateX(0); } 18.33% { transform: translateX(402px); } 100% { transform: translateX(402px); } }
+    @keyframes type0 { 0% { transform: translateX(0); } 18.33% { transform: translateX(420px); } 100% { transform: translateX(420px); } }
     .g0 { opacity: 0; animation: vis0 12s linear 0s infinite; }
     .c0 { animation: type0 12s steps(33) 0s infinite; }
     @keyframes vis1 { 0% { opacity: 1; } 32.83% { opacity: 1; } 33.33% { opacity: 0; } 100% { opacity: 0; } }
-    @keyframes type1 { 0% { transform: translateX(0); } 18.33% { transform: translateX(406px); } 100% { transform: translateX(406px); } }
+    @keyframes type1 { 0% { transform: translateX(0); } 18.33% { transform: translateX(434px); } 100% { transform: translateX(434px); } }
     .g1 { opacity: 0; animation: vis1 12s linear 4s infinite; }
     .c1 { animation: type1 12s steps(36) 4s infinite; }
     @keyframes vis2 { 0% { opacity: 1; } 32.83% { opacity: 1; } 33.33% { opacity: 0; } 100% { opacity: 0; } }
-    @keyframes type2 { 0% { transform: translateX(0); } 18.33% { transform: translateX(517px); } 100% { transform: translateX(517px); } }
+    @keyframes type2 { 0% { transform: translateX(0); } 18.33% { transform: translateX(590px); } 100% { transform: translateX(590px); } }
     .g2 { opacity: 0; animation: vis2 12s linear 8s infinite; }
-    .c2 { animation: type2 12s steps(41) 8s infinite; }
+    .c2 { animation: type2 12s steps(45) 8s infinite; }
     @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
     .blink { animation: blink 1s steps(1) infinite; }
     @media (prefers-reduced-motion: reduce) { .g0 { opacity: 1 !important; animation: none !important; } .g1, .g2 { animation: none !important; } .c0 { animation: none !important; transform: translateX(2000px); } .blink { animation: none !important; } }
   </style>
   <defs>
-    <pattern id="geo" width="56" height="56" patternUnits="userSpaceOnUse">
-      <polygon points="28.00,11.00 32.98,15.98 40.02,15.98 40.02,23.02 45.00,28.00 40.02,32.98 40.02,40.02 32.98,40.02 28.00,45.00 23.02,40.02 15.98,40.02 15.98,32.98 11.00,28.00 15.98,23.02 15.98,15.98 23.02,15.98" fill="none" stroke="#D4A84B" stroke-width="0.9"/>
-      <polygon points="31.06,20.61 32.33,23.67 35.39,24.94 34.12,28.00 35.39,31.06 32.33,32.33 31.06,35.39 28.00,34.12 24.94,35.39 23.67,32.33 20.61,31.06 21.88,28.00 20.61,24.94 23.67,23.67 24.94,20.61 28.00,21.88" fill="none" stroke="#D4A84B" stroke-width="0.6"/>
-      <polygon points="0,-6 6,0 0,6 -6,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <polygon points="56,-6 62,0 56,6 50,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <polygon points="0,50 6,56 0,62 -6,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <polygon points="56,50 62,56 56,62 50,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <line x1="11" y1="28" x2="0" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
-      <line x1="45" y1="28" x2="56" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
-      <line x1="28" y1="11" x2="28" y2="0" stroke="#D4A84B" stroke-width="0.6"/>
-      <line x1="28" y1="45" x2="28" y2="56" stroke="#D4A84B" stroke-width="0.6"/>
-    </pattern>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0E2A2E"/><stop offset="1" stop-color="#0A1F22"/>
+      <stop offset="0" stop-color="#09070A"/><stop offset="1" stop-color="#120A0C"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#E9DCC4" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#E9DCC4" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#E9DCC4" stop-opacity="0"/>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#050506" stop-opacity="0"/>
+      <stop offset="1" stop-color="#050506" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="redline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C8102E" stop-opacity="0"/>
+      <stop offset="0.15" stop-color="#FF4D4D"/>
+      <stop offset="1" stop-color="#C8102E" stop-opacity="0"/>
     </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
   </defs>
-  <rect x="1" y="1" width="1398" height="74" rx="38" fill="#0E2A2E" stroke="#2B5A5C" stroke-width="2"/>
-  <polygon points="52.00,23.00 56.39,27.39 62.61,27.39 62.61,33.61 67.00,38.00 62.61,42.39 62.61,48.61 56.39,48.61 52.00,53.00 47.61,48.61 41.39,48.61 41.39,42.39 37.00,38.00 41.39,33.61 41.39,27.39 47.61,27.39" fill="none" stroke="#D4A84B" stroke-width="1.6"/>
-  <polygon points="52.00,32.00 53.76,33.76 56.24,33.76 56.24,36.24 58.00,38.00 56.24,39.76 56.24,42.24 53.76,42.24 52.00,44.00 50.24,42.24 47.76,42.24 47.76,39.76 46.00,38.00 47.76,36.24 47.76,33.76 50.24,33.76" fill="#D4A84B"/>
+  <rect x="1" y="1" width="1398" height="74" rx="10" fill="#120A0C" stroke="#3A1E20" stroke-width="2"/>
+  <rect x="1" y="1" width="5" height="74" fill="#C8102E"/>
+  <polygon points="44,30 52,38 44,46 36,38" fill="#FF4D4D"/>
   <g class="g0">
-    <text id="p0" x="96" y="48" font-family="Segoe UI" font-size="26" fill="#E9DCC4">Data Science &amp; AI student at UAEU</text>
+    <text id="p0" x="84" y="48" font-family="Bahnschrift" font-size="26" letter-spacing="0.5" fill="#EDE6E3">Data Science &amp; AI student at UAEU</text>
     <g class="c0">
-      <rect x="94" y="14" width="1260" height="50" fill="#0E2A2E"/>
-      <rect class="blink" x="96" y="22" width="3" height="32" fill="#D4A84B"/>
+      <rect x="82" y="14" width="1280" height="50" fill="#120A0C"/>
+      <rect class="blink" x="84" y="22" width="3" height="32" fill="#FF4D4D"/>
     </g>
   </g>
   <g class="g1">
-    <text id="p1" x="96" y="48" font-family="Segoe UI" font-size="26" fill="#E9DCC4">Building tools students actually use</text>
+    <text id="p1" x="84" y="48" font-family="Bahnschrift" font-size="26" letter-spacing="0.5" fill="#EDE6E3">Building tools students actually use</text>
     <g class="c1">
-      <rect x="94" y="14" width="1260" height="50" fill="#0E2A2E"/>
-      <rect class="blink" x="96" y="22" width="3" height="32" fill="#D4A84B"/>
+      <rect x="82" y="14" width="1280" height="50" fill="#120A0C"/>
+      <rect class="blink" x="84" y="22" width="3" height="32" fill="#FF4D4D"/>
     </g>
   </g>
   <g class="g2">
-    <text id="p2" x="96" y="48" font-family="Segoe UI" font-size="26" fill="#E9DCC4">Making a browser game, one chapter a week</text>
+    <text id="p2" x="84" y="48" font-family="Bahnschrift" font-size="26" letter-spacing="0.5" fill="#EDE6E3">Making Borrowed Alibi, a browser mystery game</text>
     <g class="c2">
-      <rect x="94" y="14" width="1260" height="50" fill="#0E2A2E"/>
-      <rect class="blink" x="96" y="22" width="3" height="32" fill="#D4A84B"/>
+      <rect x="82" y="14" width="1280" height="50" fill="#120A0C"/>
+      <rect class="blink" x="84" y="22" width="3" height="32" fill="#FF4D4D"/>
     </g>
   </g>
 </svg>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="470" viewBox="0 0 1400 470">
+  <style>
+    @keyframes breathe { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+    @keyframes drift { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 0.8; } 100% { transform: translateY(-140px); opacity: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.4); } }
+    @keyframes eye { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+    .breathe { animation: breathe 7s ease-in-out infinite; }
+    .dust { animation: drift 9s linear infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-in-out infinite; }
+    .eye { animation: eye 4s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .breathe, .dust, .pulse, .eye { animation: none !important; }
+      .dust { opacity: 0; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09070A"/><stop offset="1" stop-color="#120A0C"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#050506" stop-opacity="0"/>
+      <stop offset="1" stop-color="#050506" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="redline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C8102E" stop-opacity="0"/>
+      <stop offset="0.15" stop-color="#FF4D4D"/>
+      <stop offset="1" stop-color="#C8102E" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="470" fill="#09070A"/>
+  <radialGradient id="pool" cx="0.5" cy="0.5" r="0.5">
+    <stop offset="0" stop-color="#FF7A45" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#C8102E" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FF4D4D" stop-opacity="0.32"/>
+    <stop offset="1" stop-color="#C8102E" stop-opacity="0.02"/>
+  </linearGradient>
+  <radialGradient id="side" cx="1" cy="0.3" r="0.9">
+    <stop offset="0" stop-color="#C8102E" stop-opacity="0.35"/>
+    <stop offset="1" stop-color="#C8102E" stop-opacity="0"/>
+  </radialGradient>
+  <rect width="1400" height="470" fill="url(#side)"/>
+  <rect x="640" y="388" width="760" height="2" fill="#2A1416"/>
+  <rect x="640" y="390" width="760" height="62" fill="#0D0708"/>
+  <line x1="1060" y1="18" x2="1060" y2="60" stroke="#1A1012" stroke-width="3"/>
+  <polygon points="1040,60 1080,60 1090,82 1030,82" fill="#1A1012" stroke="#000" stroke-width="2"/>
+  <ellipse cx="1060" cy="82" rx="30" ry="5" fill="#FF4D4D" class="breathe"/>
+  <polygon class="breathe" points="1034,84 1086,84 1210,400 910,400" fill="url(#cone)"/>
+  <ellipse cx="1060" cy="404" rx="190" ry="26" fill="url(#pool)"/>
+  <g>
+    <circle class="dust" style="animation-delay:-1.2s;animation-duration:11.3s" cx="1057" cy="233" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-5.4s;animation-duration:8.7s" cx="1031" cy="256" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-8.5s;animation-duration:11.8s" cx="1113" cy="182" r="1.6" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-1.0s;animation-duration:9.5s" cx="993" cy="200" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-6.7s;animation-duration:7.5s" cx="1123" cy="236" r="1.3" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-7.1s;animation-duration:11.4s" cx="1003" cy="196" r="1.3" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-3.1s;animation-duration:7.2s" cx="1151" cy="239" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-3.4s;animation-duration:9.5s" cx="1145" cy="154" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-7.7s;animation-duration:11.8s" cx="1010" cy="324" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-8.1s;animation-duration:8.0s" cx="985" cy="285" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-8.3s;animation-duration:9.5s" cx="1147" cy="173" r="1.6" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-0.6s;animation-duration:8.0s" cx="1073" cy="190" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-8.5s;animation-duration:10.6s" cx="1107" cy="176" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-5.5s;animation-duration:7.7s" cx="971" cy="279" r="1.3" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-0.3s;animation-duration:11.3s" cx="1115" cy="284" r="1.6" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-5.5s;animation-duration:7.2s" cx="1160" cy="199" r="1.3" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-5.1s;animation-duration:10.4s" cx="1138" cy="271" r="1.3" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-3.3s;animation-duration:8.1s" cx="983" cy="360" r="1" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-0.2s;animation-duration:11.0s" cx="1167" cy="284" r="1.3" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-2.0s;animation-duration:8.3s" cx="960" cy="168" r="0.8" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-4.7s;animation-duration:7.3s" cx="1025" cy="211" r="1.6" fill="#FF7A45"/>
+    <circle class="dust" style="animation-delay:-4.5s;animation-duration:10.5s" cx="1124" cy="342" r="1" fill="#FF7A45"/>
+  </g>
+  <g transform="translate(1060,402) scale(1.45) translate(-878,-442)">
+    <ellipse cx="878" cy="442" rx="30" ry="6" fill="#000" opacity="0.7"/>
+    <path d="M 866,402 L 868,438 L 876,438 L 876,402 Z" fill="#2A1D20" stroke="#000" stroke-width="1.5"/>
+    <path d="M 880,402 L 880,438 L 889,438 L 889,402 Z" fill="#3A2629" stroke="#000" stroke-width="1.5"/>
+    <path d="M 865,436 L 877,436 L 877,442 L 861,442 Z" fill="#160E10" stroke="#000" stroke-width="1.2"/>
+    <path d="M 879,436 L 891,436 L 891,442 L 875,442 Z" fill="#160E10" stroke="#000" stroke-width="1.2"/>
+    <path d="M 858,292 Q 878,284 898,292 L 902,350 L 906,410 Q 880,416 852,410 L 856,350 Z" fill="#120A0C" stroke="#000" stroke-width="2"/>
+    <path d="M 896,296 L 900,350 L 904,408" fill="none" stroke="#FF4D4D" stroke-width="1.6" opacity="0.85"/>
+    <path d="M 860,294 Q 878,287 896,294" fill="none" stroke="#FF7A45" stroke-width="1.4" opacity="0.8"/>
+    <path d="M 858,296 L 852,352 L 856,370 L 863,368 L 864,352 Z" fill="#0E0809" stroke="#000" stroke-width="1.5"/>
+    <rect x="852" y="364" width="11" height="3" fill="#70CFCF"/>
+    <path d="M 853,367 L 856,384 L 862,384 L 863,367 Z" fill="#3A2629" stroke="#000" stroke-width="1.2"/>
+    <path d="M 898,296 L 902,352 L 900,370 L 893,368 L 892,352 Z" fill="#160D0F" stroke="#000" stroke-width="1.5"/>
+    <path d="M 900,300 L 902,352" stroke="#FF4D4D" stroke-width="1" opacity="0.8"/>
+    <path d="M 893,367 L 893,384 L 899,384 L 901,367 Z" fill="#5A3236" stroke="#000" stroke-width="1.2"/>
+    <rect x="873" y="276" width="10" height="12" fill="#2A1D20" stroke="#000" stroke-width="1.2"/>
+    <path d="M 866,256 Q 866,246 878,246 Q 891,246 891,258 L 890,272 Q 884,282 874,281 Q 866,278 865,268 Z" fill="#2E2023" stroke="#000" stroke-width="1.8"/>
+    <path d="M 878,246 Q 891,246 891,258 L 890,272 Q 886,279 880,281" fill="none" stroke="#FF4D4D" stroke-width="1.6" opacity="0.9"/>
+    <rect x="866" y="259" width="10" height="2.6" rx="1.3" fill="#05090C"/>
+    <rect class="eye" x="866" y="259" width="10" height="2.6" rx="1.3" fill="none" stroke="#70CFCF" stroke-width="0.9"/>
+  </g>
+  <text x="84" y="104" font-family="Bahnschrift" font-weight="600" font-size="15" letter-spacing="6" fill="#FF4D4D">FLAGSHIP PROJECT</text>
+  <text x="80" y="186" font-family="Bahnschrift" font-weight="700" font-size="70" letter-spacing="3" fill="#EDE6E3">BORROWED ALIBI</text>
+  <rect x="84" y="210" width="460" height="2" fill="url(#redline)"/>
+  <text x="84" y="252" font-family="Bahnschrift" font-size="21" fill="#A8999A">An android investigation thriller you play in the browser.</text>
+  <text x="84" y="282" font-family="Bahnschrift" font-size="21" fill="#A8999A">Read the scene. Question the witness. Decide what goes on record.</text>
+  <g font-family="Bahnschrift" font-size="13" letter-spacing="2">
+    <rect x="84" y="318" width="108" height="30" rx="2" fill="none" stroke="#3A1E20" stroke-width="1.6"/>
+    <text x="138" y="338" text-anchor="middle" fill="#EDE6E3">PHASER 3</text>
+    <rect x="202" y="318" width="128" height="30" rx="2" fill="none" stroke="#3A1E20" stroke-width="1.6"/>
+    <text x="266" y="338" text-anchor="middle" fill="#EDE6E3">JAVASCRIPT</text>
+    <rect x="340" y="318" width="104" height="30" rx="2" fill="none" stroke="#3A1E20" stroke-width="1.6"/>
+    <text x="392" y="338" text-anchor="middle" fill="#EDE6E3">SVG ART</text>
+  </g>
+  <circle class="pulse" cx="91" cy="386" r="5" fill="#FF4D4D"/>
+  <text x="106" y="391" font-family="Bahnschrift" font-size="14" letter-spacing="3" fill="#6E5E60">IN DEVELOPMENT  ·  A NEW CHAPTER EVERY WEEK</text>
+  <rect width="1400" height="470" fill="url(#vignette)"/>
+  <rect width="1400" height="470" filter="url(#grain)" opacity="0.06"/>
+  <rect width="1400" height="18" fill="#050506"/><rect y="452" width="1400" height="18" fill="#050506"/>
+</svg>

@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="700" height="300" viewBox="0 0 700 300">
   <style>
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes spinback { to { transform: rotate(-360deg); } }
-    @keyframes sweep { 0% { transform: translateX(-300px); } 100% { transform: translateX(1700px); } }
-    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
-    @keyframes travel { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(var(--d)); opacity: 0; } }
-    .spin { transform-box: fill-box; transform-origin: center; animation: spin 160s linear infinite; }
-    .spinback { transform-box: fill-box; transform-origin: center; animation: spinback 220s linear infinite; }
-    .sweep { animation: sweep 9s ease-in-out infinite; }
-    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+    @keyframes breathe { 0%, 100% { opacity: 0.75; } 50% { opacity: 1; } }
+    @keyframes drift { 0% { transform: translateY(0); opacity: 0; } 15% { opacity: 0.8; } 100% { transform: translateY(-140px); opacity: 0; } }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.4); } }
+    @keyframes eye { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+    .breathe { animation: breathe 7s ease-in-out infinite; }
+    .dust { animation: drift 9s linear infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-in-out infinite; }
+    .eye { animation: eye 4s ease-in-out infinite; }
     @media (prefers-reduced-motion: reduce) {
-      .spin, .spinback, .sweep, .pulse, .travel { animation: none !important; }
-      .sweep, .travel { opacity: 0; }
+      .breathe, .dust, .pulse, .eye { animation: none !important; }
+      .dust { opacity: 0; }
     }
   </style>
   <defs>
-    <pattern id="geo" width="56" height="56" patternUnits="userSpaceOnUse">
-      <polygon points="28.00,11.00 32.98,15.98 40.02,15.98 40.02,23.02 45.00,28.00 40.02,32.98 40.02,40.02 32.98,40.02 28.00,45.00 23.02,40.02 15.98,40.02 15.98,32.98 11.00,28.00 15.98,23.02 15.98,15.98 23.02,15.98" fill="none" stroke="#D4A84B" stroke-width="0.9"/>
-      <polygon points="31.06,20.61 32.33,23.67 35.39,24.94 34.12,28.00 35.39,31.06 32.33,32.33 31.06,35.39 28.00,34.12 24.94,35.39 23.67,32.33 20.61,31.06 21.88,28.00 20.61,24.94 23.67,23.67 24.94,20.61 28.00,21.88" fill="none" stroke="#D4A84B" stroke-width="0.6"/>
-      <polygon points="0,-6 6,0 0,6 -6,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <polygon points="56,-6 62,0 56,6 50,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <polygon points="0,50 6,56 0,62 -6,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <polygon points="56,50 62,56 56,62 50,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
-      <line x1="11" y1="28" x2="0" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
-      <line x1="45" y1="28" x2="56" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
-      <line x1="28" y1="11" x2="28" y2="0" stroke="#D4A84B" stroke-width="0.6"/>
-      <line x1="28" y1="45" x2="28" y2="56" stroke="#D4A84B" stroke-width="0.6"/>
-    </pattern>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0E2A2E"/><stop offset="1" stop-color="#0A1F22"/>
+      <stop offset="0" stop-color="#09070A"/><stop offset="1" stop-color="#120A0C"/>
     </linearGradient>
-    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#E9DCC4" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#E9DCC4" stop-opacity="0.55"/>
-      <stop offset="1" stop-color="#E9DCC4" stop-opacity="0"/>
+    <radialGradient id="vignette" cx="0.5" cy="0.5" r="0.75">
+      <stop offset="0.55" stop-color="#050506" stop-opacity="0"/>
+      <stop offset="1" stop-color="#050506" stop-opacity="0.85"/>
+    </radialGradient>
+    <linearGradient id="redline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C8102E" stop-opacity="0"/>
+      <stop offset="0.15" stop-color="#FF4D4D"/>
+      <stop offset="1" stop-color="#C8102E" stop-opacity="0"/>
     </linearGradient>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
   </defs>
-  <rect x="1" y="1" width="698" height="298" rx="22" fill="url(#bg)" stroke="#2B5A5C" stroke-width="2"/>
-  <clipPath id="tile"><rect x="34" y="34" width="150" height="232" rx="16"/></clipPath>
-  <rect x="34" y="34" width="150" height="232" rx="16" fill="#143A3E"/>
-  <rect x="34" y="34" width="150" height="232" fill="url(#geo)" opacity="0.18" clip-path="url(#tile)"/>
+  <rect x="1" y="1" width="698" height="298" rx="8" fill="url(#bg)" stroke="#3A1E20" stroke-width="2"/>
+  <rect x="1" y="1" width="5" height="298" fill="#C8102E"/>
+  <radialGradient id="tileglow" cx="0.5" cy="0.5" r="0.6">
+    <stop offset="0" stop-color="#C8102E" stop-opacity="0.35"/><stop offset="1" stop-color="#C8102E" stop-opacity="0"/>
+  </radialGradient>
+  <rect x="34" y="34" width="150" height="232" rx="6" fill="#09070A" stroke="#3A1E20" stroke-width="1.5"/>
+  <rect x="34" y="34" width="150" height="232" rx="6" fill="url(#tileglow)"/>
   <g>
-      <circle cx="109" cy="150.0" r="48" fill="#8C7A4E"/>
-      <circle cx="109" cy="150.0" r="40" fill="#5E5236"/>
-      <circle cx="109" cy="150.0" r="36" fill="#0B1620"/>
-      <rect x="89" y="146.0" width="40" height="8" rx="4" fill="#101B24" stroke="#70CFCF" stroke-width="2.4"/>
-      <ellipse cx="99" cy="170.0" rx="4" ry="2" fill="#C08A54"/>
-      <rect x="85" y="176.0" width="48" height="1.6" fill="#2E5F66"/>
+      <circle cx="109" cy="150.0" r="46" fill="#5A2A2A"/>
+      <circle cx="109" cy="150.0" r="38" fill="#2A1416"/>
+      <circle cx="109" cy="150.0" r="34" fill="#07090C"/>
+      <rect x="89" y="146.0" width="40" height="8" rx="4" fill="#05090C" stroke="#70CFCF" stroke-width="2.4"/>
+      <path d="M 133,120.0 A 38 38 0 0 1 147,150.0" fill="none" stroke="#FF4D4D" stroke-width="2" opacity="0.8"/>
   </g>
-  <text x="212" y="80" font-family="Segoe UI Semibold" font-size="34" fill="#E9DCC4">Borrowed Alibi</text>
-  <rect x="538" y="52" width="128" height="28" rx="14" fill="#70CFCF" opacity="0.16"/>
-  <rect x="538" y="52" width="128" height="28" rx="14" fill="none" stroke="#70CFCF" stroke-width="1.4"/>
-  <text x="601.8" y="71" text-anchor="middle" font-family="Segoe UI Semibold" font-size="12.5" letter-spacing="1.5" fill="#70CFCF">IN PROGRESS</text>
-  <text x="214" y="126" font-family="Segoe UI" font-size="17" fill="#9DB5B1">A browser investigation thriller released one</text><text x="214" y="151" font-family="Segoe UI" font-size="17" fill="#9DB5B1">chapter a week. Walk the scene, compare a</text><text x="214" y="176" font-family="Segoe UI" font-size="17" fill="#9DB5B1">recorded memory with the room, and decide what</text><text x="214" y="201" font-family="Segoe UI" font-size="17" fill="#9DB5B1">goes on record.</text>
-  <rect x="214" y="238" width="91" height="30" rx="15" fill="none" stroke="#2B5A5C" stroke-width="1.6"/><text x="259.4" y="259" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#E9DCC4">Phaser 3</text><rect x="314.8" y="238" width="107" height="30" rx="15" fill="none" stroke="#2B5A5C" stroke-width="1.6"/><text x="368.3" y="259" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#E9DCC4">JavaScript</text><rect x="431.8" y="238" width="83" height="30" rx="15" fill="none" stroke="#2B5A5C" stroke-width="1.6"/><text x="473.1" y="259" text-anchor="middle" font-family="Segoe UI" font-size="14" fill="#E9DCC4">SVG art</text>
-  <polygon points="660.00,250.00 662.93,252.93 667.07,252.93 667.07,257.07 670.00,260.00 667.07,262.93 667.07,267.07 662.93,267.07 660.00,270.00 657.07,267.07 652.93,267.07 652.93,262.93 650.00,260.00 652.93,257.07 652.93,252.93 657.07,252.93" fill="none" stroke="#70CFCF" stroke-width="1.2" opacity="0.7"/>
+  <text x="212" y="82" font-family="Bahnschrift" font-weight="700" font-size="34" letter-spacing="1" fill="#EDE6E3">Borrowed Alibi</text>
+  <rect x="564" y="54" width="102" height="28" rx="2" fill="#C8102E" opacity="0.25"/>
+  <rect x="564" y="54" width="102" height="28" rx="2" fill="none" stroke="#FF4D4D" stroke-width="1.4"/>
+  <text x="615.0" y="73" text-anchor="middle" font-family="Bahnschrift" font-weight="600" font-size="12.5" letter-spacing="2" fill="#FF4D4D">FLAGSHIP</text>
+  <text x="214" y="128" font-family="Bahnschrift" font-size="17" fill="#A8999A">A browser investigation thriller released one</text><text x="214" y="153" font-family="Bahnschrift" font-size="17" fill="#A8999A">chapter a week. Walk the scene, compare a</text><text x="214" y="178" font-family="Bahnschrift" font-size="17" fill="#A8999A">recorded memory with the room, and decide what</text><text x="214" y="203" font-family="Bahnschrift" font-size="17" fill="#A8999A">goes on record.</text>
+  <rect x="214" y="238" width="91" height="30" rx="2" fill="none" stroke="#3A1E20" stroke-width="1.6"/><text x="259.4" y="259" text-anchor="middle" font-family="Bahnschrift" font-size="14" fill="#EDE6E3">Phaser 3</text><rect x="314.8" y="238" width="107" height="30" rx="2" fill="none" stroke="#3A1E20" stroke-width="1.6"/><text x="368.3" y="259" text-anchor="middle" font-family="Bahnschrift" font-size="14" fill="#EDE6E3">JavaScript</text><rect x="431.8" y="238" width="83" height="30" rx="2" fill="none" stroke="#3A1E20" stroke-width="1.6"/><text x="473.1" y="259" text-anchor="middle" font-family="Bahnschrift" font-size="14" fill="#EDE6E3">SVG art</text>
+  <rect width="700" height="300" filter="url(#grain)" opacity="0.04"/>
 </svg>
