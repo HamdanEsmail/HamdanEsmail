@@ -101,7 +101,6 @@ Undergraduate · United Arab Emirates
 I like meeting students, researchers, and people building with data and AI.
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/hamdanesmail/"><img src="https://img.shields.io/badge/LinkedIn-Connect-120A0C?style=for-the-badge&logo=linkedin&logoColor=EDE6E3&labelColor=120A0C" alt="Connect with Hamdan on LinkedIn"></a>
   <a href="https://github.com/HamdanEsmail"><img src="https://img.shields.io/badge/GitHub-Follow-C8102E?style=for-the-badge&logo=github&logoColor=EDE6E3&labelColor=C8102E" alt="Follow Hamdan on GitHub"></a>
 </p>
 
