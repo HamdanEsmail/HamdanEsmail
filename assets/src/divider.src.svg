@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="30" viewBox="0 0 1400 30">
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spinback { to { transform: rotate(-360deg); } }
+    @keyframes sweep { 0% { transform: translateX(-300px); } 100% { transform: translateX(1700px); } }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
+    @keyframes travel { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(var(--d)); opacity: 0; } }
+    .spin { transform-box: fill-box; transform-origin: center; animation: spin 160s linear infinite; }
+    .spinback { transform-box: fill-box; transform-origin: center; animation: spinback 220s linear infinite; }
+    .sweep { animation: sweep 9s ease-in-out infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .spin, .spinback, .sweep, .pulse, .travel { animation: none !important; }
+      .sweep, .travel { opacity: 0; }
+    }
+  </style>
+  <defs>
+    <pattern id="geo" width="56" height="56" patternUnits="userSpaceOnUse">
+      <polygon points="28.00,11.00 32.98,15.98 40.02,15.98 40.02,23.02 45.00,28.00 40.02,32.98 40.02,40.02 32.98,40.02 28.00,45.00 23.02,40.02 15.98,40.02 15.98,32.98 11.00,28.00 15.98,23.02 15.98,15.98 23.02,15.98" fill="none" stroke="#D4A84B" stroke-width="0.9"/>
+      <polygon points="31.06,20.61 32.33,23.67 35.39,24.94 34.12,28.00 35.39,31.06 32.33,32.33 31.06,35.39 28.00,34.12 24.94,35.39 23.67,32.33 20.61,31.06 21.88,28.00 20.61,24.94 23.67,23.67 24.94,20.61 28.00,21.88" fill="none" stroke="#D4A84B" stroke-width="0.6"/>
+      <polygon points="0,-6 6,0 0,6 -6,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <polygon points="56,-6 62,0 56,6 50,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <polygon points="0,50 6,56 0,62 -6,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <polygon points="56,50 62,56 56,62 50,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <line x1="11" y1="28" x2="0" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
+      <line x1="45" y1="28" x2="56" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
+      <line x1="28" y1="11" x2="28" y2="0" stroke="#D4A84B" stroke-width="0.6"/>
+      <line x1="28" y1="45" x2="28" y2="56" stroke="#D4A84B" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A2E"/><stop offset="1" stop-color="#0A1F22"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E9DCC4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#E9DCC4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#E9DCC4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="30" fill="#0A1F22" opacity="0"/>
+  <line x1="120" y1="15" x2="640" y2="15" stroke="#D4A84B" stroke-width="1.2" opacity="0.7"/>
+  <line x1="760" y1="15" x2="1280" y2="15" stroke="#D4A84B" stroke-width="1.2" opacity="0.7"/>
+  <polygon points="700.00,3.00 703.51,6.51 708.49,6.51 708.49,11.49 712.00,15.00 708.49,18.51 708.49,23.49 703.51,23.49 700.00,27.00 696.49,23.49 691.51,23.49 691.51,18.51 688.00,15.00 691.51,11.49 691.51,6.51 696.49,6.51" fill="none" stroke="#D4A84B" stroke-width="1.4"/>
+  <polygon points="700.00,10.00 701.46,11.46 703.54,11.46 703.54,13.54 705.00,15.00 703.54,16.46 703.54,18.54 701.46,18.54 700.00,20.00 698.54,18.54 696.46,18.54 696.46,16.46 695.00,15.00 696.46,13.54 696.46,11.46 698.54,11.46" fill="#D4A84B"/>
+  <polygon points="660,15 666,10 672,15 666,20" fill="#5FB3A8"/>
+  <polygon points="728,15 734,10 740,15 734,20" fill="#5FB3A8"/>
+</svg>

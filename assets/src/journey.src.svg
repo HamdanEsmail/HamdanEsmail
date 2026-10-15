@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="300" viewBox="0 0 1400 300">
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes spinback { to { transform: rotate(-360deg); } }
+    @keyframes sweep { 0% { transform: translateX(-300px); } 100% { transform: translateX(1700px); } }
+    @keyframes pulse { 0%, 100% { opacity: 0.35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.3); } }
+    @keyframes travel { 0% { transform: translateX(0); opacity: 0; } 8% { opacity: 1; } 92% { opacity: 1; } 100% { transform: translateX(var(--d)); opacity: 0; } }
+    .spin { transform-box: fill-box; transform-origin: center; animation: spin 160s linear infinite; }
+    .spinback { transform-box: fill-box; transform-origin: center; animation: spinback 220s linear infinite; }
+    .sweep { animation: sweep 9s ease-in-out infinite; }
+    .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2.6s ease-in-out infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .spin, .spinback, .sweep, .pulse, .travel { animation: none !important; }
+      .sweep, .travel { opacity: 0; }
+    }
+  </style>
+  <defs>
+    <pattern id="geo" width="56" height="56" patternUnits="userSpaceOnUse">
+      <polygon points="28.00,11.00 32.98,15.98 40.02,15.98 40.02,23.02 45.00,28.00 40.02,32.98 40.02,40.02 32.98,40.02 28.00,45.00 23.02,40.02 15.98,40.02 15.98,32.98 11.00,28.00 15.98,23.02 15.98,15.98 23.02,15.98" fill="none" stroke="#D4A84B" stroke-width="0.9"/>
+      <polygon points="31.06,20.61 32.33,23.67 35.39,24.94 34.12,28.00 35.39,31.06 32.33,32.33 31.06,35.39 28.00,34.12 24.94,35.39 23.67,32.33 20.61,31.06 21.88,28.00 20.61,24.94 23.67,23.67 24.94,20.61 28.00,21.88" fill="none" stroke="#D4A84B" stroke-width="0.6"/>
+      <polygon points="0,-6 6,0 0,6 -6,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <polygon points="56,-6 62,0 56,6 50,0" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <polygon points="0,50 6,56 0,62 -6,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <polygon points="56,50 62,56 56,62 50,56" fill="none" stroke="#D4A84B" stroke-width="0.7"/>
+      <line x1="11" y1="28" x2="0" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
+      <line x1="45" y1="28" x2="56" y2="28" stroke="#D4A84B" stroke-width="0.6"/>
+      <line x1="28" y1="11" x2="28" y2="0" stroke="#D4A84B" stroke-width="0.6"/>
+      <line x1="28" y1="45" x2="28" y2="56" stroke="#D4A84B" stroke-width="0.6"/>
+    </pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E2A2E"/><stop offset="1" stop-color="#0A1F22"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E9DCC4" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#E9DCC4" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#E9DCC4" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="1398" height="298" rx="24" fill="url(#bg)" stroke="#2B5A5C" stroke-width="2"/>
+  <text x="44" y="46" font-family="Segoe UI Semibold" font-size="14" letter-spacing="4" fill="#D4A84B">JOURNEY</text>
+  <line x1="110.0" y1="150" x2="1054.0" y2="150" stroke="#D4A84B" stroke-width="2.4"/><line x1="1054.0" y1="150" x2="1290.0" y2="150" stroke="#9DB5B1" stroke-width="2" stroke-dasharray="6 8"/><g class="travel" style="--d:944px; animation: travel 7s ease-in-out infinite;"><circle cx="110.0" cy="150" r="5" fill="#E9DCC4"/></g><polygon points="110.00,134.00 114.69,138.69 121.31,138.69 121.31,145.31 126.00,150.00 121.31,154.69 121.31,161.31 114.69,161.31 110.00,166.00 105.31,161.31 98.69,161.31 98.69,154.69 94.00,150.00 98.69,145.31 98.69,138.69 105.31,138.69" fill="#D4A84B"/><polygon points="112.30,144.46 113.25,146.75 115.54,147.70 114.59,150.00 115.54,152.30 113.25,153.25 112.30,155.54 110.00,154.59 107.70,155.54 106.75,153.25 104.46,152.30 105.41,150.00 104.46,147.70 106.75,146.75 107.70,144.46 110.00,145.41" fill="#0E2A2E"/><text x="110.0" y="94" text-anchor="middle" font-family="Segoe UI Semibold" font-size="21" fill="#E9DCC4">UAEU</text><text x="110.0" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14.5" fill="#9DB5B1">B.Sc. Data Science &amp; AI</text><polygon points="346.00,134.00 350.69,138.69 357.31,138.69 357.31,145.31 362.00,150.00 357.31,154.69 357.31,161.31 350.69,161.31 346.00,166.00 341.31,161.31 334.69,161.31 334.69,154.69 330.00,150.00 334.69,145.31 334.69,138.69 341.31,138.69" fill="#D4A84B"/><polygon points="348.30,144.46 349.25,146.75 351.54,147.70 350.59,150.00 351.54,152.30 349.25,153.25 348.30,155.54 346.00,154.59 343.70,155.54 342.75,153.25 340.46,152.30 341.41,150.00 340.46,147.70 342.75,146.75 343.70,144.46 346.00,145.41" fill="#0E2A2E"/><text x="346.0" y="212" text-anchor="middle" font-family="Segoe UI Semibold" font-size="21" fill="#E9DCC4">FirstRole</text><text x="346.0" y="236" text-anchor="middle" font-family="Segoe UI" font-size="14.5" fill="#9DB5B1">Sep 2026</text><polygon points="582.00,134.00 586.69,138.69 593.31,138.69 593.31,145.31 598.00,150.00 593.31,154.69 593.31,161.31 586.69,161.31 582.00,166.00 577.31,161.31 570.69,161.31 570.69,154.69 566.00,150.00 570.69,145.31 570.69,138.69 577.31,138.69" fill="#D4A84B"/><polygon points="584.30,144.46 585.25,146.75 587.54,147.70 586.59,150.00 587.54,152.30 585.25,153.25 584.30,155.54 582.00,154.59 579.70,155.54 578.75,153.25 576.46,152.30 577.41,150.00 576.46,147.70 578.75,146.75 579.70,144.46 582.00,145.41" fill="#0E2A2E"/><text x="582.0" y="94" text-anchor="middle" font-family="Segoe UI Semibold" font-size="21" fill="#E9DCC4">CourseSignal</text><text x="582.0" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14.5" fill="#9DB5B1">Oct 2026</text><polygon points="818.00,134.00 822.69,138.69 829.31,138.69 829.31,145.31 834.00,150.00 829.31,154.69 829.31,161.31 822.69,161.31 818.00,166.00 813.31,161.31 806.69,161.31 806.69,154.69 802.00,150.00 806.69,145.31 806.69,138.69 813.31,138.69" fill="#D4A84B"/><polygon points="820.30,144.46 821.25,146.75 823.54,147.70 822.59,150.00 823.54,152.30 821.25,153.25 820.30,155.54 818.00,154.59 815.70,155.54 814.75,153.25 812.46,152.30 813.41,150.00 812.46,147.70 814.75,146.75 815.70,144.46 818.00,145.41" fill="#0E2A2E"/><text x="818.0" y="212" text-anchor="middle" font-family="Segoe UI Semibold" font-size="21" fill="#E9DCC4">Study Sprint</text><text x="818.0" y="236" text-anchor="middle" font-family="Segoe UI" font-size="14.5" fill="#9DB5B1">Oct 2026 · Terra prep</text><g class="pulse"><polygon points="1054.00,124.00 1061.62,131.62 1072.38,131.62 1072.38,142.38 1080.00,150.00 1072.38,157.62 1072.38,168.38 1061.62,168.38 1054.00,176.00 1046.38,168.38 1035.62,168.38 1035.62,157.62 1028.00,150.00 1035.62,142.38 1035.62,131.62 1046.38,131.62" fill="#70CFCF" opacity="0.22"/></g><polygon points="1054.00,134.00 1058.69,138.69 1065.31,138.69 1065.31,145.31 1070.00,150.00 1065.31,154.69 1065.31,161.31 1058.69,161.31 1054.00,166.00 1049.31,161.31 1042.69,161.31 1042.69,154.69 1038.00,150.00 1042.69,145.31 1042.69,138.69 1049.31,138.69" fill="#70CFCF"/><text x="1054.0" y="94" text-anchor="middle" font-family="Segoe UI Semibold" font-size="21" fill="#70CFCF">Borrowed Alibi</text><text x="1054.0" y="118" text-anchor="middle" font-family="Segoe UI" font-size="14.5" fill="#9DB5B1">Oct 2026 → Jan 2027</text><polygon points="1290.00,135.00 1294.39,139.39 1300.61,139.39 1300.61,145.61 1305.00,150.00 1300.61,154.39 1300.61,160.61 1294.39,160.61 1290.00,165.00 1285.61,160.61 1279.39,160.61 1279.39,154.39 1275.00,150.00 1279.39,145.61 1279.39,139.39 1285.61,139.39" fill="#0E2A2E" stroke="#9DB5B1" stroke-width="1.6" stroke-dasharray="3 3"/><text x="1290.0" y="212" text-anchor="middle" font-family="Segoe UI Semibold" font-size="21" fill="#9DB5B1">Next</text><text x="1290.0" y="236" text-anchor="middle" font-family="Segoe UI" font-size="14.5" fill="#9DB5B1">Internships &amp; research</text>
+</svg>
