@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img"><title>Hamdan Esmail. 01 Who: Data Science and AI undergraduate, United Arab Emirates University. 02 What: I ship small, finished tools and games that people use.</title><style>text{font-family:'Helvetica Neue', Helvetica, Arial, sans-serif}.bar{transform:scaleX(0);transform-origin:0 0;animation:bar-in .9s cubic-bezier(.7,0,.2,1) 0.1s forwards}@keyframes bar-in{to{transform:scaleX(1)}}</style>
+    <rect width="1200" height="440" fill="#ffffff"/><line x1="600" x2="600" y1="0" y2="440" stroke="#e4e4e4"/><line x1="900" x2="900" y1="0" y2="440" stroke="#e4e4e4"/>
+    <rect class="bar" x="0" y="0" width="1200" height="16" fill="#ff3b2f"/>
+    <text x="40" y="190" font-size="120" font-weight="700" fill="#0f0f0f" letter-spacing="-6">Hamdan</text>
+    <text x="40" y="306" font-size="120" font-weight="700" fill="#0f0f0f" letter-spacing="-6">Esmail</text>
+    <text x="620" y="90" font-size="14" font-weight="700" letter-spacing="1" fill="#ff3b2f">01  WHO</text>
+    <text x="620" y="124" font-size="19" fill="#0f0f0f">Data Science &amp; AI undergraduate,</text>
+    <text x="620" y="150" font-size="19" fill="#0f0f0f">United Arab Emirates University.</text>
+    <text x="920" y="90" font-size="14" font-weight="700" letter-spacing="1" fill="#ff3b2f">02  WHAT</text>
+    <text x="920" y="124" font-size="19" fill="#0f0f0f">I ship small, finished tools</text>
+    <text x="920" y="150" font-size="19" fill="#0f0f0f">and games that people use.</text>
+    <line x1="620" x2="1160" y1="230" y2="230" stroke="#e4e4e4"/>
+    <text x="620" y="262" font-size="13" fill="#6a6a6a">BASED IN THE UAE</text>
+    <text x="920" y="262" font-size="13" fill="#6a6a6a">OPEN TO INTERNSHIPS &amp; RESEARCH</text>
+    <text x="620" y="330" font-size="13" fill="#6a6a6a">PYTHON  &#183;  TYPESCRIPT  &#183;  DATA  &#183;  GAMES</text>
+    <text x="920" y="330" font-size="13" fill="#6a6a6a">GITHUB.COM/HAMDANESMAIL</text>
+    <text x="40" y="400" font-size="13" fill="#6a6a6a">PROFILE  &#183;  2026</text>
+    <text x="1160" y="400" text-anchor="end" font-size="13" fill="#6a6a6a">SHEET 1 / 1</text></svg>
