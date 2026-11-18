@@ -77,6 +77,13 @@ def test_readme_uses_every_graphic_and_nothing_that_is_missing():
     assert refs == {f"assets/{name}.svg" for name in EXPECTED}
 
 
+def test_the_header_and_the_button_open_the_site():
+    if not pieces.SITE:
+        pytest.skip("the site has no address yet")
+    assert f'<a href="{pieces.SITE}"><img src="assets/header.svg"' in readme()
+    assert f'<a href="{pieces.SITE}"><img src="assets/open.svg" height="48" alt="Open the site"></a>' in readme()
+
+
 def test_the_stacked_pictures_touch():
     # A space or a line break between two pictures of a stack would show as a gap on GitHub.
     stacks = re.findall(r"<p>(.*?)</p>", readme(), flags=re.S)

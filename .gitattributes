@@ -1,0 +1,3 @@
+# The build writes the graphics with Unix line endings. Keep them that way on every machine,
+# so a fresh build never shows up as a change.
+*.svg text eol=lf

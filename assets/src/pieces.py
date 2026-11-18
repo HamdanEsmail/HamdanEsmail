@@ -21,8 +21,9 @@ except ImportError:  # the facts below can still be read; build.py says what is 
 
 PICTURES = Path(__file__).resolve().parent / "pictures"
 
-# The address of the portfolio site. While this is empty there is no "Open the site" button.
-SITE = ""
+# The address of the portfolio site. The header and the "Open the site" button lead there.
+# If this is ever emptied, the button is not built and the README must not link to it.
+SITE = "https://hamdanesmail.vercel.app"
 
 # name, field colour, ink colour, live address, and one sentence cut down from its repository's description
 WORLDS = [

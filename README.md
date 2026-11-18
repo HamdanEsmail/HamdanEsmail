@@ -1,4 +1,4 @@
-<p><img src="assets/header.svg" width="100%" align="top" alt="Hamdan Esmail. Nine worlds."><img
+<p><a href="https://hamdanesmail.vercel.app"><img src="assets/header.svg" width="100%" align="top" alt="Hamdan Esmail. Nine worlds."></a><img
   src="assets/terminal.svg" width="100%" align="top" alt="A terminal draws a small 3D figure of Hamdan, then prints who he is."><img
   src="assets/about.svg" width="100%" align="top" alt="I build things you can open. I'm Hamdan. I study data science and AI at United Arab Emirates University, and I like software that is finished."><img
   src="assets/journey.svg" width="100%" align="top" alt="How I got here: 2020, 2025, 2025, 2026."></p>
@@ -22,6 +22,8 @@
 <b>2026</b> &nbsp;Two browser games for Hack Club Terra, a price model from 109,706 Dubai property sales, then nine builds in seventeen days for one TinyFish bounty round.</p>
 
 </details>
+
+<p><a href="https://hamdanesmail.vercel.app"><img src="assets/open.svg" height="48" alt="Open the site"></a></p>
 
 <h3>The nine worlds</h3>
 
