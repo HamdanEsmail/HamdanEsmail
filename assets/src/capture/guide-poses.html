@@ -1,0 +1,87 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>The guide in every pose the README uses</title>
+<style>
+  html, body { margin: 0; background: transparent; }
+  canvas { display: block; width: 450px; height: 488px; }
+</style>
+<canvas id="c"></canvas>
+<script type="module">
+  // The site's own guide.js is used as it is. This page steps its clock by hand and fixes its dice,
+  // so each pose is the same on every run: no blink mid-capture, and the idle acts come when asked.
+  import * as THREE from "/site/vendor/three.module.min.js";
+
+  const boxes = [], groups = [];
+  const add = THREE.Object3D.prototype.add;
+  THREE.Object3D.prototype.add = function (...kids) {
+    for (const k of kids) {
+      if (k.isMesh && k.material.side !== THREE.BackSide) boxes.push(k);
+      else if (k.isGroup) groups.push(k);
+    }
+    return add.apply(this, kids);
+  };
+  let dice = 0.1;
+  Math.random = () => dice;
+  let pending = null, now = 0, t = 0;
+  window.requestAnimationFrame = (cb) => { pending = cb; return 1; };
+  window.cancelAnimationFrame = () => { pending = null; };
+  const step = (ms = 16) => { now += ms; t += Math.min(0.05, ms / 1000); const cb = pending; pending = null; if (cb) cb(now); };
+  const run = (seconds) => { for (let i = 0; i < Math.round(seconds / 0.04); i++) step(40); };
+  const settle = () => new Promise((r) => setTimeout(r, 140));
+
+  const { createGuide } = await import("/site/js/guide.js");
+  const g = createGuide(document.getElementById("c"));
+  THREE.Object3D.prototype.add = add;
+  g.start();
+  now = performance.now();
+  step();
+
+  const root = groups.find((x) => x.parent && x.parent.isScene);
+  const spinner = new THREE.Group();
+  root.parent.add(spinner);
+  spinner.add(root);
+  const mouth = groups.find((x) => x.scale.y < 0.01);
+  const eye = boxes[28];
+  const eyesOpen = () => { for (let i = 0; i < 12 && eye.scale.y < 0.9; i++) step(40); };
+  const until = (test, max = 4) => { for (let i = 0; i < max / 0.03 && !test(); i++) step(30); };
+
+  const arms = groups.filter((x) => x.parent === root.children[0]);
+  const head = groups.find((x) => x.parent === root && x !== root.children[0]);
+  const steps = { idle: () => run(0.2) };
+  // One full turn, taken before anything else moves.
+  for (let k = 1; k < 16; k++) steps["spin" + String(k).padStart(2, "0")] = () => { spinner.rotation.y = (Math.PI * 2 * k) / 16; };
+  // The jump comes early, before his own idle acts can begin and turn his head.
+  Object.assign(steps, {
+    air: () => { spinner.rotation.y = 0; g.air(1); run(1.0); },
+    talkA: () => { g.air(0); run(0.5); g.talk(true); run(0.3); until(() => mouth.scale.y > 0.7); },
+    talkB: () => { until(() => mouth.scale.y < 0.15); },
+    wave1: () => { g.talk(false); g.wave(6); run(1.0); },
+    wave2: () => run(0.12),
+    point: () => { g.wave(0); g.point(6); run(1.0); }
+  });
+  // Walking, seen from each side: eight frames make one full stride.
+  [["walkR", 0.75], ["walkL", -1.55]].forEach(([name, turn]) => {
+    for (let k = 0; k < 8; k++) {
+      steps[name + k] = () => {
+        if (k === 0) { g.point(0); g.walk(true); spinner.rotation.y = turn; run(0.8); }
+        else { step(36); step(35.4); }
+      };
+    }
+  });
+  // The small things he does on his own. guide.js times them itself, so each is found by watching for its movement.
+  const waitFor = (pick, test, hold) => () => {
+    g.walk(false);
+    spinner.rotation.y = 0;
+    dice = pick;
+    until(test, 30);
+    run(hold);
+  };
+  steps.watch = waitFor(0.1, () => arms[1].rotation.x < -0.6, 0.7);
+  steps.glasses = waitFor(0.3, () => arms[0].rotation.x < -1.2, 0.7);
+  steps.aroundA = waitFor(0.9, () => Math.abs(head.rotation.y) > 0.3, 0.25);
+  steps.aroundB = () => { const side = Math.sign(head.rotation.y); until(() => Math.sign(head.rotation.y) !== side && Math.abs(head.rotation.y) > 0.3, 4); run(0.2); };
+
+  window.before = async (id) => { steps[id](); if (!/^(talk|spin|walk)/.test(id)) eyesOpen(); step(); await settle(); };
+  window.targets = Object.keys(steps).map((id) => ({ id, x: 0, y: 0, w: 450, h: 488 }));
+  window.ready = true;
+</script>

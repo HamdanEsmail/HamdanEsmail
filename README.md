@@ -1,108 +1,64 @@
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/header-dark.svg">
-  <img src="assets/header-light.svg" width="100%" alt="Hamdan Esmail. 01 Who: Data Science and AI undergraduate, United Arab Emirates University. 02 What: I ship small, finished tools and games that people use. Based in the UAE, open to internships and research.">
-</picture>
-
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/tag-now-dark.svg">
-    <img src="assets/tag-now-light.svg" height="22" align="absmiddle" alt="03 Now">
-  </picture>
-  &nbsp;Building <a href="https://github.com/HamdanEsmail/keepers-lantern">Keeper's Lantern</a>, a browser survival game, for Hack Club Terra week 1. <a href="https://hamdanesmail.github.io/keepers-lantern/">Play it</a>.
-</p>
-
-<a href="https://hamdanesmail.github.io/dubai-property-prices/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/featured-dark.svg">
-    <img src="assets/featured-light.svg" width="100%" alt="04 Featured: Dubai property prices. What flats and villas sell for per square metre in each Dubai community, from every 2026 sale registered with the Dubai Land Department. 109,706 cleaned sales across 147 communities. 7.8% model error against a 10.9% baseline. 78% of later sales inside the 80% interval.">
-  </picture>
-</a>
-
-<p>
-  <a href="https://hamdanesmail.github.io/dubai-property-prices/">Open the explorer</a> &nbsp;·&nbsp;
-  <a href="https://github.com/HamdanEsmail/dubai-property-prices">Repository</a> &nbsp;·&nbsp;
-  <a href="https://github.com/HamdanEsmail/dubai-property-prices/blob/main/docs/data.md">How the data was cleaned</a>
-</p>
-
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://hamdanesmail.github.io/keepers-lantern/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/project-keepers-lantern-dark.svg">
-          <img src="assets/project-keepers-lantern-light.svg" width="100%" alt="05.1 Game: Keeper's Lantern. A survival game about a lantern and a forest that moves every night, made for Hack Club Terra. Phaser 3, 202 tests, sound made in code, plays in the browser.">
-        </picture>
-      </a>
-      <p><a href="https://hamdanesmail.github.io/keepers-lantern/">Play in the browser</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/keepers-lantern">Repo</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://firstrole.hamdanesmail12-7a9.workers.dev">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/project-firstrole-dark.svg">
-          <img src="assets/project-firstrole-light.svg" width="100%" alt="05.2 Tool: FirstRole. A job finder for students that reads public careers pages and shows every source it used. TypeScript on Cloudflare Workers, never applies for you, live.">
-        </picture>
-      </a>
-      <p><a href="https://firstrole.hamdanesmail12-7a9.workers.dev">Live demo</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/firstrole">Repo</a></p>
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top">
-      <a href="https://coursesignal-bzb.pages.dev/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/project-coursesignal-dark.svg">
-          <img src="assets/project-coursesignal-light.svg" width="100%" alt="05.3 Tool: CourseSignal. A student copilot in iMessage: text a question, get a short answer backed by a page you can tap. TypeScript, TinyFish agents, touches your calendar only on approval.">
-        </picture>
-      </a>
-      <p><a href="https://coursesignal-bzb.pages.dev/">Companion site</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/coursesignal">Repo</a></p>
-    </td>
-    <td width="50%" valign="top">
-      <a href="https://hamdanesmail.github.io/study-sprint/">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="assets/project-study-sprint-dark.svg">
-          <img src="assets/project-study-sprint-light.svg" width="100%" alt="05.4 Tool: Study Sprint. A local-first focus timer. Pick one task, run a sprint, keep your queue after a refresh. No account, no server. Plain JavaScript, JSON backups, keyboard shortcuts, live.">
-        </picture>
-      </a>
-      <p><a href="https://hamdanesmail.github.io/study-sprint/">Try it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/study-sprint">Repo</a></p>
-    </td>
-  </tr>
-</table>
+<p><img src="assets/header.svg" width="100%" align="top" alt="Hamdan Esmail. Nine worlds."><img
+  src="assets/terminal.svg" width="100%" align="top" alt="A terminal draws a small 3D figure of Hamdan, then prints who he is."><img
+  src="assets/about.svg" width="100%" align="top" alt="I build things you can open. I'm Hamdan. I study data science and AI at United Arab Emirates University, and I like software that is finished."><img
+  src="assets/journey.svg" width="100%" align="top" alt="How I got here: 2020, 2025, 2025, 2026."></p>
 
 <details>
-  <summary>More</summary>
-  <ul>
-    <li><a href="https://github.com/HamdanEsmail/borrowed-alibi">Borrowed Alibi</a>: an android investigation thriller you play in the browser. Prologue playable.</li>
-    <li><a href="https://github.com/HamdanEsmail/Windows-95-in-a-Browser">Windows 95 in a Browser</a>: the classic desktop and file manager, with sounds generated by the Web Audio API.</li>
-    <li><a href="https://hamdanesmail.github.io/ChemistryProject.github.io/">Chemistry Project</a>: a learning site with quizzes and interactive simulations.</li>
-  </ul>
+<summary>Read the About part as plain text</summary>
+
+<p><b>I'm Hamdan.</b> I study data science and AI at United Arab Emirates University, and I like software that is finished: it has a live address, it works on a phone, and you can try it without asking me first.</p>
+
+<p>Most of what I make checks a claim against its source: a register, a price page, a permit office, my own university portal. When a tool of mine can't prove something, it says so and leaves the gap open. I would rather show a blank than a guess.</p>
+
+<p><b>Studying</b> B.Sc. in Data Science and Artificial Intelligence, United Arab Emirates University<br>
+<b>Based</b> United Arab Emirates &nbsp;·&nbsp; <b>Speaks</b> Arabic and English<br>
+<b>Works in</b> TypeScript, Python, Dart, Cloudflare Workers, Phaser</p>
+
+<h3>How I got here</h3>
+
+<p><b>2020</b> &nbsp;I looked after the computers at my father's business, for a staff of ten. I was the whole IT department.<br>
+<b>2025</b> &nbsp;First place at the AUS High School Computing Competition with Digital EcoHome, a smart-home app that read eleven Arduino sensors.<br>
+<b>2025</b> &nbsp;Finished school at the top of my class, and started Data Science and AI at UAEU.<br>
+<b>2026</b> &nbsp;Two browser games for Hack Club Terra, a price model from 109,706 Dubai property sales, then nine builds in seventeen days for one TinyFish bounty round.</p>
+
 </details>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/toolkit-dark.svg">
-  <img src="assets/toolkit-light.svg" width="100%" alt="06 Toolkit. Data: Python, pandas, LightGBM, scikit-learn, matplotlib, pytest. Web: TypeScript, JavaScript, Phaser 3, Vite, Cloudflare Workers, HTML and CSS. Practice: tests and CI on every repo, GitHub Pages and Cloudflare, Git, plain-English READMEs, temporal validation, documented cleaning rules.">
-</picture>
+<h3>The nine worlds</h3>
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/tag-education-dark.svg">
-    <img src="assets/tag-education-light.svg" height="22" align="absmiddle" alt="07 Education">
-  </picture>
-  &nbsp;<strong>United Arab Emirates University</strong>, B.Sc. in Data Science and Artificial Intelligence, undergraduate.
-</p>
+<p><a href="https://falaj.falaj.workers.dev/"><img src="assets/world-falaj.svg" width="100%" align="top" alt="Falaj. UAEU's public website as ten MCP tools, read live with TinyFish."></a><a
+  href="https://backed.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-backed.svg" width="100%" align="top" alt="Backed. Who funded companies like yours, with the proof."></a><a
+  href="https://standing.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-standing.svg" width="100%" align="top" alt="Standing. What the official register says about a person or a business, right now, with the proof."></a><a
+  href="https://fineprint.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-fineprint.svg" width="100%" align="top" alt="Fineprint. A dated record of the web's small print: pricing pages, terms, policies and fee tables."></a><a
+  href="https://redtape.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-redtape.svg" width="100%" align="top" alt="Redtape. Every licence, permit and filing to start one activity in three places, each fee proved on its official page or left open."></a><a
+  href="https://groundwork.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-groundwork.svg" width="100%" align="top" alt="Groundwork. Nine public records on one Philadelphia address, each linked to its source."></a><a
+  href="https://upstream.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-upstream.svg" width="100%" align="top" alt="Upstream. Highlight a claim on any page and follow it back to where it first appeared."></a><a
+  href="https://knock.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-knock.svg" width="100%" align="top" alt="Knock. Hand in a spreadsheet of companies and get it back with a verdict on every row, the day each was last seen and links to the evidence."></a><a
+  href="https://takehome.hamdanesmail12-7a9.workers.dev/"><img src="assets/world-takehome.svg" width="100%" align="top" alt="Takehome. Take everything out of a student portal that has no export button."></a></p>
 
-<p>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/tag-contact-dark.svg">
-    <img src="assets/tag-contact-light.svg" height="22" align="absmiddle" alt="08 Contact">
-  </picture>
-  &nbsp;I like talking with people who build with data.
-</p>
+<details>
+<summary>The nine worlds as plain text, with links to the code</summary>
 
-<a href="https://github.com/HamdanEsmail">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/hello-dark.svg">
-    <img src="assets/hello-light.svg" height="56" alt="Say hello">
-  </picture>
-</a>
+<ul>
+<li><b>Falaj.</b> UAEU's public website as ten MCP tools, read live with TinyFish. <a href="https://falaj.falaj.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/falaj">Code</a></li>
+<li><b>Backed.</b> Who funded companies like yours, with the proof. <a href="https://backed.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/backed">Code</a></li>
+<li><b>Standing.</b> What the official register says about a person or a business, right now, with the proof. <a href="https://standing.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/standing">Code</a></li>
+<li><b>Fineprint.</b> A dated record of the web's small print: pricing pages, terms, policies and fee tables. <a href="https://fineprint.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/fineprint">Code</a></li>
+<li><b>Redtape.</b> Every licence, permit and filing to start one activity in three places, each fee proved on its official page or left open. <a href="https://redtape.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/redtape">Code</a></li>
+<li><b>Groundwork.</b> Nine public records on one Philadelphia address, each linked to its source. <a href="https://groundwork.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/groundwork">Code</a></li>
+<li><b>Upstream.</b> Highlight a claim on any page and follow it back to where it first appeared. <a href="https://upstream.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/upstream">Code</a></li>
+<li><b>Knock.</b> Hand in a spreadsheet of companies and get it back with a verdict on every row, the day each was last seen and links to the evidence. <a href="https://knock.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/knock">Code</a></li>
+<li><b>Takehome.</b> Take everything out of a student portal that has no export button. <a href="https://takehome.hamdanesmail12-7a9.workers.dev/">Open it</a> &nbsp;·&nbsp; <a href="https://github.com/HamdanEsmail/takehome">Code</a></li>
+</ul>
 
-<!-- EMAIL: replace the line below with the address once it is decided -->
-<p>Email: coming soon &nbsp;·&nbsp; GitHub: <a href="https://github.com/HamdanEsmail">@HamdanEsmail</a></p>
+</details>
+
+<h3>Also made</h3>
+
+<ul>
+<li><a href="https://hamdanesmail.github.io/dubai-property-prices/">Dubai property prices</a>: what flats and villas sell for per square metre in each Dubai community, from 109,706 cleaned sales.</li>
+<li><a href="https://hamdanesmail.github.io/keepers-lantern/">Keeper's Lantern</a>: a survival game about a lantern and a forest that moves every night.</li>
+<li><a href="https://github.com/HamdanEsmail/borrowed-alibi">Borrowed Alibi</a>: an android investigation thriller you play in the browser.</li>
+<li><a href="https://firstrole.hamdanesmail12-7a9.workers.dev">FirstRole</a>, <a href="https://coursesignal-bzb.pages.dev/">CourseSignal</a> and <a href="https://hamdanesmail.github.io/study-sprint/">Study Sprint</a>: three tools for students.</li>
+</ul>
+
+<p><a href="https://github.com/HamdanEsmail"><img src="assets/hello.svg" height="48" alt="Say hello"></a></p>

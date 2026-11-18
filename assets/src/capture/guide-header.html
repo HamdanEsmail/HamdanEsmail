@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Still frames of the guide</title>
+<style>
+  html, body { margin: 0; background: transparent; }
+  canvas { display: block; width: 220px; height: 238px; }
+</style>
+<canvas id="c"></canvas>
+<script type="module">
+  import { createGuide } from "/site/js/guide.js";
+  const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+  const g = createGuide(document.getElementById("c"));
+  g.start();
+  // Each frame is a moment of the live figure. The talking frames are taken a beat apart so the mouth differs.
+  // This page runs on the real clock, so a new capture catches slightly different moments. The other two
+  // figure pages step time by hand and give the same pictures every time.
+  const steps = {
+    idle: async () => { await wait(900); },
+    talk1: async () => { g.talk(true); await wait(700); },
+    talk2: async () => { await wait(70); },
+    talk3: async () => { await wait(70); },
+    talk4: async () => { await wait(70); },
+    talk5: async () => { await wait(70); },
+    talk6: async () => { await wait(70); },
+    air: async () => { g.talk(false); g.air(1); await wait(800); },
+    wave1: async () => { g.air(0); g.wave(5); await wait(800); },
+    wave2: async () => { await wait(120); },
+    point: async () => { g.wave(0); g.point(5); await wait(900); }
+  };
+  window.before = (id) => steps[id]();
+  window.targets = Object.keys(steps).map((id) => ({ id, x: 0, y: 0, w: 220, h: 238 }));
+  window.ready = true;
+</script>

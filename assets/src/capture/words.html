@@ -1,0 +1,84 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Words for the README graphics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #000; }
+  body { padding: 40px 80px; font-family: "Bricolage Grotesque", sans-serif; color: #fff; -webkit-font-smoothing: antialiased; }
+  .w { white-space: nowrap; margin-bottom: 0.6em; line-height: 1.5; }
+  .w i { display: inline-block; width: 0; height: 0; vertical-align: baseline; }
+  /* Each size is drawn at the weight and spacing the site uses for it. */
+  .name { font-size: 180px; font-weight: 600; letter-spacing: -0.055em; }
+  .head { font-size: 180px; font-weight: 600; letter-spacing: -0.045em; }
+  .world { font-size: 140px; font-weight: 600; letter-spacing: -0.055em; }
+  .h3 { font-size: 96px; font-weight: 600; letter-spacing: -0.03em; }
+  .label { font-size: 56px; font-weight: 600; letter-spacing: -0.03em; font-variation-settings: "opsz" 30; }
+  .text { font-size: 44px; font-weight: 500; letter-spacing: -0.01em; font-variation-settings: "opsz" 20; }
+  /* Sentences: set to a fixed measure so the browser breaks the lines. 60px here stands for 40 units in a graphic. */
+  .block { font-size: 60px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.25; white-space: normal; font-variation-settings: "opsz" 30; }
+  .block.big { font-size: 66px; }
+</style>
+<body>
+<script>
+  // The same lines as WORLDS in ../pieces.py. tests/test_assets.py checks that the two agree.
+  const worlds = {
+    Falaj: "UAEU's public website as ten MCP tools, read live with TinyFish.",
+    Backed: "Who funded companies like yours, with the proof.",
+    Standing: "What the official register says about a person or a business, right now, with the proof.",
+    Fineprint: "A dated record of the web's small print: pricing pages, terms, policies and fee tables.",
+    Redtape: "Every licence, permit and filing to start one activity in three places, each fee proved on its official page or left open.",
+    Groundwork: "Nine public records on one Philadelphia address, each linked to its source.",
+    Upstream: "Highlight a claim on any page and follow it back to where it first appeared.",
+    Knock: "Hand in a spreadsheet of companies and get it back with a verdict on every row, the day each was last seen and links to the evidence.",
+    Takehome: "Take everything out of a student portal that has no export button."
+  };
+  const journey = [
+    "I looked after the computers at my father's business, for a staff of ten. I was the whole IT department.",
+    "First place at the AUS High School Computing Competition with Digital EcoHome, a smart-home app that read eleven Arduino sensors.",
+    "Finished school at the top of my class, and started Data Science and AI at UAEU.",
+    "Two browser games for Hack Club Terra, a price model from 109,706 Dubai property sales, then nine builds in seventeen days for one TinyFish bounty round."
+  ];
+  // [class, id, text, measure in px (sentences only)]
+  const items = [["name", "hamdan", "Hamdan"], ["name", "esmail", "Esmail"]]
+    .concat(Object.keys(worlds).map((n) => ["world", "w-" + n.toLowerCase(), n]))
+    .concat(Object.keys(worlds).map((n) => ["label", "l-" + n.toLowerCase(), n]))
+    .concat([
+      ["text", "t-open-site", "Open the site"],
+      ["text", "t-say-hello", "Say hello"],
+      ["text", "t-open-it", "Open it"],
+      ["label", "l-nine-worlds", "Nine worlds"],
+      ["head", "h-build", "I build things"],
+      ["head", "h-open", "you can open."],
+      ["h3", "h-journey", "How I got here"],
+      ["world", "y-2020", "2020"], ["world", "y-2025", "2025"], ["world", "y-2026", "2026"],
+      ["block big", "b-statement", "I'm Hamdan. I study data science and AI at United Arab Emirates University, and I like software that is finished.", 1050],
+      ["block", "b-finished", "Finished means it has a live address, it works on a phone, and you can try it without asking me first.", 1050],
+      ["block", "b-quote", "I would rather show a blank than a guess.", 540]
+    ])
+    .concat(journey.map((s, i) => ["block", "j-" + i, s, 1080]))
+    .concat(Object.keys(worlds).map((n) => ["block", "s-" + n.toLowerCase(), worlds[n], 900]));
+  for (const [cls, id, text, measure] of items) {
+    const d = document.createElement("div");
+    d.className = "w " + cls;
+    d.dataset.id = id;
+    if (measure) d.style.width = measure + "px";
+    d.innerHTML = "<i></i><span></span>";
+    d.lastChild.textContent = text;
+    document.body.appendChild(d);
+  }
+  document.fonts.load('600 180px "Bricolage Grotesque"').then(() => document.fonts.load('500 44px "Bricolage Grotesque"')).then(() => document.fonts.ready).then(() => {
+    if (!document.fonts.check('600 180px "Bricolage Grotesque"')) throw new Error("font missing");
+    window.targets = [...document.querySelectorAll(".w")].map((d) => {
+      const cs = getComputedStyle(d), em = parseFloat(cs.fontSize);
+      const r = d.lastChild.getBoundingClientRect();
+      const base = d.firstChild.getBoundingClientRect().top + scrollY;   // the first line's baseline
+      const pad = Math.ceil(em * 0.12);
+      const top = Math.floor(base - em * 0.9), bottom = Math.ceil(Math.max(base + em * 0.32, r.bottom + scrollY + em * 0.06));
+      const lines = d.classList.contains("block") ? Math.round(r.height / parseFloat(cs.lineHeight)) : 1;
+      return { id: d.dataset.id, x: Math.floor(r.left - pad), y: top, w: Math.ceil(r.width + pad * 2), h: bottom - top, em, base: base - top, lines, text: d.lastChild.textContent };
+    });
+    window.ready = true;
+  });
+</script>

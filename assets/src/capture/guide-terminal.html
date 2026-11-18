@@ -1,0 +1,73 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>The guide, built part by part</title>
+<style>
+  html, body { margin: 0; background: transparent; }
+  canvas { display: block; width: 300px; height: 325px; }
+</style>
+<canvas id="c"></canvas>
+<script type="module">
+  // Frames for the README's terminal animation. The site's own guide.js is used as it is; this page
+  // only watches which boxes it creates, so that parts can be shown as outlines or as finished pieces.
+  import * as THREE from "/site/vendor/three.module.min.js";
+
+  const boxes = [], groups = [];
+  const add = THREE.Object3D.prototype.add;
+  THREE.Object3D.prototype.add = function (...kids) {
+    for (const k of kids) {
+      if (k.isMesh && k.material.side !== THREE.BackSide) boxes.push(k);
+      else if (k.isGroup) groups.push(k);
+    }
+    return add.apply(this, kids);
+  };
+  // Time is stepped by hand, so every frame is the same on every run and he never blinks mid-capture.
+  let pending = null, now = 0;
+  window.requestAnimationFrame = (cb) => { pending = cb; return 1; };
+  window.cancelAnimationFrame = () => { pending = null; };
+  const step = (ms = 16) => { now += ms; const cb = pending; pending = null; if (cb) cb(now); };
+  const settle = () => new Promise((r) => setTimeout(r, 140));
+
+  const { createGuide } = await import("/site/js/guide.js");
+  const g = createGuide(document.getElementById("c"));
+  THREE.Object3D.prototype.add = add;
+  g.start();
+  now = performance.now();
+  step();
+
+  const root = groups.find((x) => x.parent && x.parent.isScene);
+  const spinner = new THREE.Group();
+  root.parent.add(spinner);
+  spinner.add(root);
+
+  const dark = new THREE.MeshBasicMaterial({ color: 0x181512 });
+  const gold = new THREE.MeshBasicMaterial({ color: 0xc9a45a, side: THREE.BackSide });
+  const parts = boxes.map((mesh) => {
+    const hull = mesh.children.find((c) => c.isMesh && c.material.side === THREE.BackSide);
+    return { mesh, hull, fill: mesh.material, line: hull && hull.material };
+  });
+  // Boxes [0, upTo) are finished; the rest are drawn as gold outlines only.
+  function solid(upTo) {
+    parts.forEach((p, i) => {
+      const done = i < upTo;
+      p.mesh.visible = done || !!p.hull;
+      p.mesh.material = done ? p.fill : dark;
+      if (p.hull) p.hull.material = done ? p.line : gold;
+    });
+  }
+  // The order guide.js makes them in: body 0-8, arms and watch 9-17, head and glasses 18-42, ghutra and agal 43-50.
+  const steps = {
+    outline: () => solid(0),
+    body: () => solid(9),
+    arms: () => solid(18),
+    head: () => solid(43),
+    idle: () => solid(parts.length)
+  };
+  for (let k = 1; k < 16; k++) steps["spin" + String(k).padStart(2, "0")] = () => { spinner.rotation.y = (Math.PI * 2 * k) / 16; };
+  steps.wave1 = () => { spinner.rotation.y = 0; g.wave(5); for (let i = 0; i < 26; i++) step(40); };
+  steps.wave2 = () => { for (let i = 0; i < 3; i++) step(40); };
+
+  window.before = async (id) => { steps[id](); step(); await settle(); };
+  window.count = parts.length;
+  window.targets = Object.keys(steps).map((id) => ({ id, x: 0, y: 0, w: 300, h: 325, boxes: parts.length }));
+  window.ready = true;
+</script>
